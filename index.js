@@ -1,3 +1,5 @@
+require('chromedriver');
+
 const express = require('express')
 const chrome = require('selenium-webdriver/chrome');
 
@@ -22,6 +24,7 @@ const screen = {
 function GetData(roll) {
     let swd = require("selenium-webdriver");
     let browser = new swd.Builder();
+
     let tab = browser.forBrowser("chrome").setChromeOptions(new chrome.Options().headless().windowSize(screen)).build();
     let tabToOpen =
         tab.get(URL1);
