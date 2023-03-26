@@ -25,7 +25,7 @@ function GetData(roll) {
     let swd = require("selenium-webdriver");
     let browser = new swd.Builder();
 
-    let tab = browser.forBrowser("/usr/lib/chromium-browser/chromedriver").setChromeOptions(new chrome.Options().headless().windowSize(screen)).build();
+    let tab = browser.forBrowser("/usr/lib/chrome").setChromeOptions(new chrome.Options().headless().windowSize(screen)).build();
     let tabToOpen =
         tab.get(URL1);
     tabToOpen
